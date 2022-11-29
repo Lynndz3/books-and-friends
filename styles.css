@@ -3,7 +3,7 @@ html {
   }
 
 body {
-  background-image: url('images/books.jpg');
+  background-image: url('images/books_main.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -177,3 +177,10 @@ body {
   .form-row button:active {
     background-color: #407FC7;
   }
+
+  @media (max-width: 480px) {
+    body {
+        background-image: url(images/books_phone.jpeg);
+        background-size: 200%;
+    }
+}

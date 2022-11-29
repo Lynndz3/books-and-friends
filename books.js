@@ -18,7 +18,7 @@ function addBooktoTable(bookNum) {
     //for every book in the collection / bookCollection that we want to insert
         // create a new row
         let newRow = tableBody.insertRow(-1);
-        // insert a new cell for title
+        // insert a new cell for each new value
         let newTitleCell = newRow.insertCell(0);
         let newAuthorCell = newRow.insertCell(1);
         let newGenreCell = newRow.insertCell(2);
