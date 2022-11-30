@@ -13,36 +13,57 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Marhey&display=swap" rel="stylesheet">
-        <title>Books & Friends</title>
+        <title>BookBound</title>
     </head>
 <body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <div class="logo">
+          <img src="../images/book-logo.png" alt="book" style="width: 30px; height: 30px">
+          <span class="navbar-brand mb-0 h1">BookBound</span></div>
+        </div>
+      </nav>
     <div class="container">
-        <div class="row">
-            <h1>we like big BOOKS and we cannot lie</h1>
-        </div>
-        <div class="row">
+        <div class="row mt-4 button-row">
             <button id='addBook' type="button" class="btn btn-secondary btn-lg">ADD BOOK</button>
-            <!-- data-bs-toggle="modal" data-bs-target="#addBookModal" -->
         </div>
-        <div class="row">
+        <div class="row table-row">
             <table class="table" id="favoriteBooks">
                 <thead>
                   <tr>
+                    <th scope="col">Add Rating</th>
                     <th scope="col">Title</th>
                     <th scope="col">Author</th>
                     <th scope="col">Genre</th>
                     <th scope="col">Reader</th>
                     <th scope="col">Rating</th>
-                    <th scope="col">Comments</th>
+                    <!-- <th scope="col">Comments</th> -->
+                  </tr>
+                  <tr>
+                    <td>Add Rating</td>
+                    <td>The Orphan Master's Son</td>
+                    <td>Adam Johnson</td>
+                    <td>Historical Fiction</td>
+                    <td>Lynn</td>
+                    <td>5: all-time favorite</td>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Hello</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
+                    <div class="modal fade" id="commentsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Comments</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                 </tbody>
               </table>
         </div>

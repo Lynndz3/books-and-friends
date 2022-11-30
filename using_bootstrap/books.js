@@ -37,9 +37,28 @@ function Book() {
 
             let newRatingCell = newRow.insertCell(4);
             populateCells(bookCollection[bookNum].rating, newRatingCell);
+            
+            if (bookCollection[bookNum].comments != '') {
+                let commentsModal = new bootstrap.Modal(document.getElementById('commentsModal'), {});
+                let comments = document.querySelector('#commentsModal .modal-body');
+                let p = document.createElement('p');
+                comments.appendChild(p);
+                let commentValue = document.createTextNode(bookCollection[bookNum].comments);
+                p.appendChild(commentValue);
+                let br = document.createElement('br');
+                newRatingCell.appendChild(br);
+                let commentLink = document.createElement('a');
+                commentLink.innerHTML = "View comments";
+                commentLink.style.fontSize = '12px';
+                commentLink.style.color = 'blue';
+                commentLink.style.textDecorationLine = 'underline';
+                newRatingCell.appendChild(commentLink);
+                commentLink.addEventListener('click', function() {
+                    commentsModal.show();
+                })
+            }
 
-            let newCommentCell = newRow.insertCell(5);
-            populateCells(bookCollection[bookNum].comments, newCommentCell);
+
     }
 
 
