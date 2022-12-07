@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treat Yo' Shelf</title>
+    <link href="normalize.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="books.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marhey&display=swap" rel="stylesheet">
+<body>
+    <div class="container">
+        <div class="header">
+        <h1>we like big BOOKS and we cannot lie</h1>
+        <p>Share your favorite books & treat yo' SHELF</p>
+        <button id="addBook">ADD BOOK</button>
+    </div>
+        <!-- The Modal -->
+        <div id="addBookModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form onsubmit="event.preventDefault()">
+                    <div class="form-row">
+                        <label for="reader-name" class="form-label">Your Full Name</label>
+                        <input type="text" class="form-control" id="reader-name">
+                    </div>
+                    <div class="form-row">
+                        <label for="title">Title</label>
+                        <input type="text" id="title">
+                    </div>
+                    <div class="form-row">
+                        <label for="author">Author</label>
+                        <input type="text" id="author">
+                    </div>
+                    
+                    <div class="form-row">
+                    <label for="genre">Genre</label>
+                    <select name="genre" id="genre">
+                        <option value="none"></option>
+                        <option value="scifi">SciFi/Fantasy</option>
+                        <option value="mystery">Mystery/Crime</option>
+                        <option value="short">Short Stories</option>
+                        <option value="historical">Historical Fiction</option>
+                        <option value="beach">Beach Read</option>
+                        <option value="fiction">Fiction (general)</option>
+                        <option value="memoir">Non-Fiction, Memoir</option>
+                        <option value="learning">Learning/Fact-Based</option>
+                    </select>
+                    </div>
+                    
+                    <div class="form-row">
+                    <label for="rating">Your Rating</label>
+                    <select name="rating" id="rating">
+                        <option value="blank"></option>
+                        <option value="1">1: don't bother</option>
+                        <option value="2">2: just ok</option>
+                        <option value="3">3: pretty good</option>
+                        <option value="4">4: really enjoyed</option>
+                        <option value="5">5: all-time favorite</option>
+                    </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="comments">Additional comments <em>(optional)</em></label>
+                    <textarea id="comments"></textarea>
+                </div>
+                <div class="form-row">
+                    <button id="submit">Submit</button>
+                </div>
+
+                </form>
+            </div>
+  
+        </div>
+
+        <table id="favoriteBooks">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Genre</th>
+                <th>Reader</th>
+                <th>Rating</th>
+                <th>Comments</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <footer>Photo by <a href="https://unsplash.com/@sharonmccutcheon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alexander Grey</a> on <a href="https://unsplash.com/s/photos/background-books?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        </footer>
+    </div>
+    
+</body>
+</html>
